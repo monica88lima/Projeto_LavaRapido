@@ -15,5 +15,7 @@ namespace Repository.Context
         }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Veiculo> Veiculos { get; set; }
+        public DbSet<PistaLavagem> PistaLavagens { get; set; }
+        public DbSet<TipoServico> TipoServicos{ get; set; }
     }
 }

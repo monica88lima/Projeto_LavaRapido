@@ -28,7 +28,7 @@ namespace Entity
         [Required]
         public ETipoPessoa TipoPessoa { get; set;} = new ETipoPessoa();
         public string? Comentario { get; set; }
-        public List<Veiculo>? Veiculos{ get; set; }
+        public ICollection<Veiculo>? Veiculos{ get; set; }
 
        
 
