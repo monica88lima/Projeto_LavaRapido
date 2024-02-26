@@ -1,4 +1,5 @@
-﻿using Entity.Enun;
+﻿using Entity;
+using Entity.Enun;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,13 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity
+namespace Service.DTOs
 {
-   
-    public class Cliente:Default
+    public class ClienteDTO
     {
-       
-
         [Required(ErrorMessage = "Campo Obrigatório")]
         [MinLength(3, ErrorMessage = "O nome de possuir mais de {1} caracteres")]
         public string NomeCompleto { get; set; }
@@ -22,20 +20,12 @@ namespace Entity
         [Required]
         public string Email { get; set; }
 
+        
         [Phone]
         [Required]
         public string Celular { get; set; }
-        [Required]
-        [PasswordPropertyText]
-        public string Senha{ get; set; }
 
-        [Required]
-        public ETipoPessoa TipoPessoa { get; set;} = new ETipoPessoa();
-        public string? Comentario { get; set; }
-        public ICollection<Veiculo>? Veiculos{ get; set; }
-
-       
-
-
+            
+        public ICollection<Veiculo>? Veiculos { get; set; }
     }
 }
