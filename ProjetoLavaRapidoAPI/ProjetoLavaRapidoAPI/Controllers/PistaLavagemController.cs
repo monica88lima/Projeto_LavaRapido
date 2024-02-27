@@ -9,12 +9,12 @@ namespace ProjetoLavaRapidoAPI.Controllers
     [Produces("application/json")]
     public class PistaLavagemController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult ConsultaStatusVeiculo (string placa)
-        {
+       
+        //public ActionResult ConsultaStatusVeiculo (string placa)
+        //{
             
             
 
-        }
+        //}
     }
 }

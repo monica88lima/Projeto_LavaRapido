@@ -18,9 +18,9 @@ namespace Repository
             _context = context;
         }
 
-        public PistaLavagem ConsultaStatus(int idVeiculo)
-        {
-            var statusVeiculo = _context.PistaLavagens.Where(x => x.VeiculoId == idVeiculo).FirstOrDefault();
-        }
+        //public PistaLavagem ConsultaStatus(int idVeiculo)
+        //{
+        //    var statusVeiculo = _context.PistaLavagens.Where(x => x.VeiculoId == idVeiculo).FirstOrDefault();
+        //}
     }
 }

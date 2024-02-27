@@ -20,12 +20,19 @@ namespace Repository
 
         public bool CadastrarCliente(Cliente cliente)
         {
+            //verificar se dados ja estao cadastrados
+
+
+            //salvar novo
             _context.Clientes.Add(cliente);
             var sucesss = _context.SaveChanges();
             return sucesss == 1;
         }
+        public Cliente BuscaClienteID(int id)
+        {
+            return _context.Clientes.FirstOrDefault(x => x.Id == id);
+        }
 
-       
 
         public bool Login(string email, string password)
         {

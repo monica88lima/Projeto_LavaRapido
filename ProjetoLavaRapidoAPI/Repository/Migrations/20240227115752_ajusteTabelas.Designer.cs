@@ -11,8 +11,8 @@ using Repository.Context;
 namespace Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240226013801_MigracaoInicial")]
-    partial class MigracaoInicial
+    [Migration("20240227115752_ajusteTabelas")]
+    partial class ajusteTabelas
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,7 +28,7 @@ namespace Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("AtualizadoEm")
+                    b.Property<DateTime?>("AtualizadoEm")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Celular")
@@ -49,6 +49,11 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("varchar(10)");
+
                     b.Property<int>("TipoPessoa")
                         .HasColumnType("int");
 
@@ -63,7 +68,7 @@ namespace Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("AtualizadoEm")
+                    b.Property<DateTime?>("AtualizadoEm")
                         .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("CriadoEm")
@@ -89,7 +94,7 @@ namespace Repository.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("AtualizadoEm")
+                    b.Property<DateTime?>("AtualizadoEm")
                         .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("CriadoEm")
@@ -121,10 +126,10 @@ namespace Repository.Migrations
                     b.Property<int>("Ano")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("AtualizadoEm")
+                    b.Property<DateTime?>("AtualizadoEm")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int?>("ClienteId")
+                    b.Property<int>("ClienteId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CriadoEm")
@@ -138,9 +143,6 @@ namespace Repository.Migrations
 
                     b.Property<string>("Observacao")
                         .HasColumnType("longtext");
-
-                    b.Property<int>("Pessoaid")
-                        .HasColumnType("int");
 
                     b.Property<string>("Placa")
                         .IsRequired()
@@ -157,15 +159,12 @@ namespace Repository.Migrations
             modelBuilder.Entity("Entity.Veiculo", b =>
                 {
                     b.HasOne("Entity.Cliente", "Cliente")
-                        .WithMany("Veiculos")
-                        .HasForeignKey("ClienteId");
+                        .WithMany()
+                        .HasForeignKey("ClienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Cliente");
-                });
-
-            modelBuilder.Entity("Entity.Cliente", b =>
-                {
-                    b.Navigation("Veiculos");
                 });
 #pragma warning restore 612, 618
         }

@@ -11,8 +11,11 @@ namespace Entity
     {
         [Key]
         public int Id { get; set; }
-       
+
+        [DataType(DataType.DateTime)]
         public DateTime CriadoEm { get; set; } = DateTime.Now;
-        public DateTime AtualizadoEm { get; set; } 
+
+        [DataType(DataType.DateTime)]
+        public DateTime? AtualizadoEm { get; set; } 
     }
 }
