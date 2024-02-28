@@ -38,5 +38,9 @@ namespace Repository
         {
             return  _context.Clientes.Any(x => x.Email == email && x.Senha == password);
         }
+        public bool ValidarEmailUnico(string email)
+        {
+            return _context.Clientes.Any(x => x.Email == email );
+        }
     }
 }

@@ -26,6 +26,7 @@ builder.Services.AddScoped<IClienteRespository, ClienteRepository>();
 builder.Services.AddScoped<IPistaLavagemRepository,PistaLavagemRepository>();
 builder.Services.AddScoped<IVeiculoRepository, VeiculoRepository>();
 builder.Services.AddScoped<IClienteService,ClienteService>();
+builder.Services.AddScoped<IPistaLavagem, VerificarPistaLavagem>();
 builder.Services.AddScoped<ILogin, Login>();
 
 var app = builder.Build();

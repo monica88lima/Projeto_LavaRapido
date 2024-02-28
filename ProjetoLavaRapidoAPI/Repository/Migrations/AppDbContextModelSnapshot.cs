@@ -106,10 +106,15 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int?>("PistaLavagemId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Preco")
                         .HasColumnType("decimal(10,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PistaLavagemId");
 
                     b.ToTable("TipoServicos");
                 });
@@ -141,6 +146,9 @@ namespace Repository.Migrations
                     b.Property<string>("Observacao")
                         .HasColumnType("longtext");
 
+                    b.Property<int?>("PistaLavagemId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Placa")
                         .IsRequired()
                         .HasMaxLength(7)
@@ -150,7 +158,16 @@ namespace Repository.Migrations
 
                     b.HasIndex("ClienteId");
 
+                    b.HasIndex("PistaLavagemId");
+
                     b.ToTable("Veiculos");
+                });
+
+            modelBuilder.Entity("Entity.TipoServico", b =>
+                {
+                    b.HasOne("Entity.PistaLavagem", null)
+                        .WithMany("TipoServico")
+                        .HasForeignKey("PistaLavagemId");
                 });
 
             modelBuilder.Entity("Entity.Veiculo", b =>
@@ -161,7 +178,18 @@ namespace Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Entity.PistaLavagem", null)
+                        .WithMany("Veiculo")
+                        .HasForeignKey("PistaLavagemId");
+
                     b.Navigation("Cliente");
+                });
+
+            modelBuilder.Entity("Entity.PistaLavagem", b =>
+                {
+                    b.Navigation("TipoServico");
+
+                    b.Navigation("Veiculo");
                 });
 #pragma warning restore 612, 618
         }

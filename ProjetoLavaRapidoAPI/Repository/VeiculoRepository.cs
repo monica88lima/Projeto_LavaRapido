@@ -18,10 +18,11 @@ namespace Repository
             _context = context;
         }
 
-        public Veiculo ConsultaVeiculo(string placa)
+        public Veiculo ConsultaVeiculoPorPlaca(string placa)
         {
-            var veiculo = _context.Veiculos.Where(x => x.Placa == placa).FirstOrDefault();
-            return veiculo is null ? null : veiculo;
+            var veiculoLocalizado = _context.Veiculos.Where(x => x.Placa == placa).FirstOrDefault();
+
+            return veiculoLocalizado;
         }
     }
 }

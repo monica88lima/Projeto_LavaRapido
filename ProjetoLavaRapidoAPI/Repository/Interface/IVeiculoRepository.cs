@@ -9,6 +9,7 @@ namespace Repository.Interface
 {
     public interface IVeiculoRepository
     {
-        Veiculo ConsultaVeiculo(string placa);
+        
+        Veiculo ConsultaVeiculoPorPlaca(string placa);
     }
 }

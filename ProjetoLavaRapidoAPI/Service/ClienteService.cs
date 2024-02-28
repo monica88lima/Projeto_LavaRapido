@@ -27,7 +27,9 @@ namespace Service
         {
             var clienteNovo = _mapper.Map<Cliente>(clienteDTO);
            
-
+            //verificar se e-mail ja existe na base
+            if(_clienteRepositorio.ValidarEmailUnico(clienteNovo.Email))
+                throw new Exception("E-mail ja cadastrado!");
 
             if (_clienteRepositorio.CadastrarCliente(clienteNovo))
                 return clienteDTO;

@@ -12,6 +12,7 @@ namespace Repository.Interface
         bool CadastrarCliente(Cliente cliente);
         bool Login(string email, string password);
         Cliente BuscaClienteID(int id);
+        bool ValidarEmailUnico(string email);
 
 
     }

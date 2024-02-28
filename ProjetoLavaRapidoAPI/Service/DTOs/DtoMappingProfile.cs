@@ -13,6 +13,7 @@ namespace Service.DTOs
         public DtoMappingProfile() {
             CreateMap<Cliente, ClienteDTO>().ReverseMap();
             CreateMap<Veiculo, VeiculoDTO>().ReverseMap();
+            CreateMap<PistaLavagem, PistaLavagemDTO>().ReverseMap();
         }
     }
 }

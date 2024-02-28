@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Entity
@@ -22,5 +23,7 @@ namespace Entity
         [Range(1, 10000, ErrorMessage = "O preço deve estar entre {1} e {2}")]
         [Column(TypeName = "decimal(10,2)")]
         public decimal Preco {  get; set; }
+    
+        
     }
 }

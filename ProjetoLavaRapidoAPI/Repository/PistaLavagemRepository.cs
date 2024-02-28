@@ -1,4 +1,5 @@
 ﻿using Entity;
+using Microsoft.EntityFrameworkCore;
 using Repository.Context;
 using Repository.Interface;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class PistaLavagemRepository : IPistaLavagemRepository
+    public class PistaLavagemRepository :IPistaLavagemRepository
     {
         private readonly AppDbContext _context;
 
@@ -18,9 +19,18 @@ namespace Repository
             _context = context;
         }
 
-        //public PistaLavagem ConsultaStatus(int idVeiculo)
-        //{
-        //    var statusVeiculo = _context.PistaLavagens.Where(x => x.VeiculoId == idVeiculo).FirstOrDefault();
-        //}
+        public PistaLavagem ConsultaStatus(string placa)
+        {
+            var consultaPista = _context.PistaLavagens
+                 .Include(x => x.Veiculo.Where(x => x.Placa == placa))
+                 .Include(x => x.TipoServico)
+                 .FirstOrDefault();
+
+            return consultaPista;
+
+        }
+
+        
+
     }
 }

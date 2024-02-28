@@ -33,7 +33,7 @@ namespace Repository.Migrations
                     Comentario = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     CriadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    AtualizadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    AtualizadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -51,7 +51,7 @@ namespace Repository.Migrations
                     ServicoId = table.Column<int>(type: "int", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     CriadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    AtualizadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    AtualizadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -70,12 +70,18 @@ namespace Repository.Migrations
                     Descricao = table.Column<string>(type: "varchar(300)", maxLength: 300, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Preco = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
+                    PistaLavagemId = table.Column<int>(type: "int", nullable: true),
                     CriadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    AtualizadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    AtualizadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TipoServicos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TipoServicos_PistaLavagens_PistaLavagemId",
+                        column: x => x.PistaLavagemId,
+                        principalTable: "PistaLavagens",
+                        principalColumn: "Id");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -95,8 +101,9 @@ namespace Repository.Migrations
                     Observacao = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ClienteId = table.Column<int>(type: "int", nullable: false),
+                    PistaLavagemId = table.Column<int>(type: "int", nullable: true),
                     CriadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    AtualizadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                    AtualizadoEm = table.Column<DateTime>(type: "datetime(6)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -107,21 +114,33 @@ namespace Repository.Migrations
                         principalTable: "Clientes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Veiculos_PistaLavagens_PistaLavagemId",
+                        column: x => x.PistaLavagemId,
+                        principalTable: "PistaLavagens",
+                        principalColumn: "Id");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TipoServicos_PistaLavagemId",
+                table: "TipoServicos",
+                column: "PistaLavagemId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Veiculos_ClienteId",
                 table: "Veiculos",
                 column: "ClienteId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Veiculos_PistaLavagemId",
+                table: "Veiculos",
+                column: "PistaLavagemId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "PistaLavagens");
-
             migrationBuilder.DropTable(
                 name: "TipoServicos");
 
@@ -130,6 +149,9 @@ namespace Repository.Migrations
 
             migrationBuilder.DropTable(
                 name: "Clientes");
+
+            migrationBuilder.DropTable(
+                name: "PistaLavagens");
         }
     }
 }
