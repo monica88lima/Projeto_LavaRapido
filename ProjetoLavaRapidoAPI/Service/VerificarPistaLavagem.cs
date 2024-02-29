@@ -26,17 +26,18 @@ namespace Service
 
         public ConsultaPistaDTO ConsultaStatusVeiculo(string placa)
         {
+            //fazer a busca pela placa para localizar o veiculo
+            var veiculo = _veiculoRepositorio.ConsultaVeiculoPorPlaca(placa);
 
-            var consultaPistaVeiculo = _LavagemRepo.ConsultaStatus(placa);
+            if(veiculo is null)
+            {
+                throw new Exception();
+            }
+            var consultaPistaVeiculo = _LavagemRepo.ConsultaStatus(veiculo.Id);
             if (consultaPistaVeiculo is null)
                 throw new NullReferenceException();
 
-            var statusVeiculo = new ConsultaPistaDTO()
-            {
-                NomeServico = consultaPistaVeiculo.TipoServico.FirstOrDefault().Nome,
-                Placa = consultaPistaVeiculo.Veiculo.FirstOrDefault().Placa,
-                StatusVeiculo = consultaPistaVeiculo.Status.ToString(),
-            };
+           //criar umas constntes p atribui valor a consulta da pista
 
             return statusVeiculo;
         }

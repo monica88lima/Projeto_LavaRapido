@@ -19,12 +19,9 @@ namespace Repository
             _context = context;
         }
 
-        public PistaLavagem ConsultaStatus(string placa)
+        public PistaLavagem ConsultaStatus(int idveiculo)
         {
-            var consultaPista = _context.PistaLavagens
-                 .Include(x => x.Veiculo.Where(x => x.Placa == placa))
-                 .Include(x => x.TipoServico)
-                 .FirstOrDefault();
+            var consultaPista = _context.PistaLavagens.Where(x => x.VeiculoId == idveiculo).FirstOrDefault();
 
             return consultaPista;
 
