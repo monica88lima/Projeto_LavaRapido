@@ -1,0 +1,31 @@
+
+-Script DML
+
+INSERT INTO `Lava_Rapido`.`PistaLavagens`
+(`status`,`VeiculoId`,`ServicoId`,`CriadoEm`)
+VALUES
+(1,11,1,'20240301'),
+(2,2,2,'20240229'),
+(4,3,3,'20240229'),
+(3,4,4,'20240229');
+
+INSERT INTO `Lava_Rapido`.`Veiculos`
+(`Placa`,`CriadoEm`,`ClienteId`)
+VALUES
+('FAD7768','20240301' ,2),
+('XYZ1253','20240301' ,3 ),
+('QWE1237','20240301' ,4 );
+
+INSERT INTO `Lava_Rapido`.`TipoServico`
+(`Nome`,` Descricao`,`CriadoEm`)
+VALUES
+('LAVAGEM EXPRESS','Brilho instantâneo! Lavagem expressa que cuida do seu carro em minutos. Surpreenda-se com o resultado!','20240102'),
+('LAVAGEM COMPLETA','Carro impecável de ponta a ponta! Nossa lavagem completa manual oferece cuidado minucioso.','20240102'),
+('LAVAGEM SIMPLES','Rápido e eficiente! Experimente nossa lavagem simples para manter seu carro sempre limpo e com aspecto renovado.','20240102'),
+('POLIMENTO DE VEÍCULOS','Realce o brilho do seu veículo! Descubra nosso serviço de enceramento, proporcionando proteção e um acabamento reluzente.','20240102');
+
+----Consultas
+select * from `Lava_Rapido`.`Clientes`
+select * from `Lava_Rapido`.`Veiculos`
+select * FROM `Lava_Rapido`.`TipoServico`
+select * FROM `Lava_Rapido`.`PistaLavagens`
