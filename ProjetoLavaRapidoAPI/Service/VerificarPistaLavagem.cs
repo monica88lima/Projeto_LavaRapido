@@ -24,22 +24,57 @@ namespace Service
             _LavagemRepo = lavagemRepo;
         }
 
+
         public ConsultaPistaDTO ConsultaStatusVeiculo(string placa)
         {
             //fazer a busca pela placa para localizar o veiculo
             var veiculo = _veiculoRepositorio.ConsultaVeiculoPorPlaca(placa);
 
-            if(veiculo is null)
+            if (veiculo is null)
             {
                 throw new Exception();
             }
-            var consultaPistaVeiculo = _LavagemRepo.ConsultaStatus(veiculo.Id);
-            if (consultaPistaVeiculo is null)
+            var consultaPistaVeiculo = _LavagemRepo.ConsultarPistas(veiculo.Id);
+            if (consultaPistaVeiculo.StatusVeiculo is null)
                 throw new NullReferenceException();
 
-           //criar umas constntes p atribui valor a consulta da pista
+            return new ConsultaPistaDTO() {
+                NomeServico = consultaPistaVeiculo.NomeServico,
+                StatusVeiculo = consultaPistaVeiculo.StatusVeiculo,
+                Placa  = consultaPistaVeiculo.Placa,
+                Posicao = consultaPistaVeiculo.posicao
+            };
+            
+        }
 
-            return statusVeiculo;
+        private ConsultaPistaDTO AtribuirCampos(int servico)
+        {
+            var statusPrenchido = new ConsultaPistaDTO();
+            switch (servico)
+            {
+                case 1:
+                    statusPrenchido.NomeServico = "Lavagem Simples";
+                    break;
+                case 2:
+                    statusPrenchido.NomeServico = "Lavagem Express";
+                    break;
+                case 3:
+                    statusPrenchido.NomeServico = "Lavagem Completa";
+                    break;
+                case 4:
+                    statusPrenchido.NomeServico = "Polimento de Veiculos";
+                    break;
+                case 5:
+                    statusPrenchido.NomeServico = "Higienização";
+                    break;
+                default:
+                    statusPrenchido.NomeServico = "Não Localizado";
+                    break;
+            }
+
+            return statusPrenchido;
+
+
         }
     }
 }

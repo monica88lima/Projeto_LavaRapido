@@ -1,6 +1,7 @@
 ﻿using Entity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Service.DTOs;
 using Service.Interface;
 using System.Security.Cryptography.X509Certificates;
 
@@ -18,7 +19,7 @@ namespace ProjetoLavaRapidoAPI.Controllers
             _pistaLavagem = pistaLavagem;
         }
         [HttpGet]
-        public ActionResult ConsultaStatusVeiculo(string placa)
+        public IActionResult ConsultaStatusVeiculo(string placa)
         {
             try
             {

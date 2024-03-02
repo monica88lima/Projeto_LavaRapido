@@ -15,9 +15,6 @@ namespace Entity
         public int ServicoId { get; set; }
 
         public EStatus Status { get; set; }
-        [JsonIgnore]
-        public ICollection<TipoServico> TipoServico { get; set; }
-        [JsonIgnore]
-        public ICollection<Veiculo> Veiculo { get; set; }
+        
     }
 }

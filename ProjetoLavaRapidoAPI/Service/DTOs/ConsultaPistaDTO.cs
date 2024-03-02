@@ -13,5 +13,6 @@ namespace Service.DTOs
         public string Placa{ get; set; }
         public string StatusVeiculo { get; set; }
         public string NomeServico{ get; set; }
+        public int Posicao { get; set; }
     }
 }

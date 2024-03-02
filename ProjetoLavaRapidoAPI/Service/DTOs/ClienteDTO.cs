@@ -13,7 +13,7 @@ namespace Service.DTOs
 {
     public class ClienteDTO
     {
-    
+        [JsonIgnore]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Campo Obrigatório")]

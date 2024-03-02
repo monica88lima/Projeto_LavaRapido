@@ -32,8 +32,10 @@ namespace Service
                 throw new Exception("E-mail ja cadastrado!");
 
             if (_clienteRepositorio.CadastrarCliente(clienteNovo))
+            {
+                clienteDTO.Senha = "*******";
                 return clienteDTO;
-            else
+            }else
                 throw new NullReferenceException();
 
 

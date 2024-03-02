@@ -16,8 +16,6 @@ namespace Service.DTOs
 
         public EStatus Status { get; set; }
      
-        public ICollection<TipoServico> TipoServico { get; set; }
        
-        public ICollection<Veiculo> Veiculo { get; set; }
     }
 }

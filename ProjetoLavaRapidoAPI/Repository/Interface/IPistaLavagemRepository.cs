@@ -9,7 +9,7 @@ namespace Repository.Interface
 {
     public interface IPistaLavagemRepository
     {
-        
-        PistaLavagem ConsultaStatus(int idveiculo);
+
+        (string Placa, string StatusVeiculo, string NomeServico, int posicao) ConsultarPistas(int veiculoId);
     }
 }
