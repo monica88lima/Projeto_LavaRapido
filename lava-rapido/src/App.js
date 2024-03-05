@@ -1,18 +1,18 @@
 import './App.css';
-import Home from './Pages/Home/Home';
-import Login from './Pages/Login/Login';
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Status from './Pages/Status/Status';
-import Timeline from './Pages/Timeline/Timeline';
-import Menu from './Components/Menu/Menu';
-import DefaultPage from './Pages/DefaultPage/DefaultPage';
 
 
 function App() {
   return (
     <div className="App">
-      <h1>REACT</h1>
+      <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<h1>login</h1>} />
+            <Route path="/home" element={<h1>home</h1>} />
+            <Route path="/status" element={<h1>status</h1>} />
+            <Route path="/timeline" element={<h1>timeline</h1>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
