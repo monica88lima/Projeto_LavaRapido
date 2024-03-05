@@ -1,0 +1,14 @@
+.content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.collapsed-button{
+    width: 70px;
+    height: 70px;
+}
+
+.content.active {
+    margin-left: 250px;
+}
+
