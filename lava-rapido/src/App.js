@@ -1,5 +1,9 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './Pages/Home/Home';
+import Login from './Pages/Login/Login';
+import Status from './Pages/Status/Status';
+import Timeline from './Pages/Timeline/Timeline';
 
 
 function App() {
@@ -7,10 +11,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-            <Route path="/" element={<h1>login</h1>} />
-            <Route path="/home" element={<h1>home</h1>} />
-            <Route path="/status" element={<h1>status</h1>} />
-            <Route path="/timeline" element={<h1>timeline</h1>} />
+        <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/status" element={<Status />} />
+            <Route path="/timeline" element={<Timeline />} />
         </Routes>
       </BrowserRouter>
     </div>
