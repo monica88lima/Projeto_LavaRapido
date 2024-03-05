@@ -1,0 +1,104 @@
+# Arquivos gerados pelo Visual Studio
+.vs/
+
+# Arquivos de compilação
+bin/
+obj/
+
+# Arquivo de configuração do usuário
+*.user
+
+# Arquivos de configuração local
+*.appsettings.json
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Pacotes NuGet
+*.nuget/
+
+# Arquivos de saída do MSBuild
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.vspscc
+*.vssscc
+.builds
+*.dotCover
+*.ncrunch*
+*.resharper*
+*.resharper.user
+_ReSharper.*
+*.dotSettings.user
+
+# Chaves e arquivos do Visual Studio
+*.suo
+*.sln.ide
+
+# Arquivos de cache e logs do Visual Studio Code
+.vscode/
+*.njsproj.user
+*.suo
+*.user
+*.bak
+*.cache
+*.class
+*.log
+*.orig
+*.tlog
+*.diff
+
+# Arquivos de depuração
+*.exe
+*.pdb
+*.dll
+*.dbmdl
+*.tlb
+*.aps
+*.exp
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.sbr
+*.tlh
+*.tlb
+*.pdb
+*.vcproj
+*.ncb
+*.suo
+*.tlh
+*.obj
+*.vspscc
+*.vssscc
+*.user
+*.scc
+
+# Dependências do NuGet
+packages/
+*.nupkg
+*.pfx
+
+# Arquivos de build do MSBuild
+*.sln.docstates
+*.Cache
+*.csproj.DotSettings.user
+*.csproj.user
+*.resharper
+*.resharper.user
