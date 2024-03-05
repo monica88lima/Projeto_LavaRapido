@@ -1,0 +1,65 @@
+.content-timeline {
+    text-align: center;
+}
+
+.content-timeline h2 {
+    color: white;
+    font-size: 12px;
+}
+
+.content-timeline h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.content-timeline p {
+    color: white;
+    font-size: 12px;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin: auto;
+}
+
+.step {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.step.active {
+    background-color: green;
+    /* Ou a cor que você desejar para as etapas concluídas */
+}
+
+.step-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar .img-timeline {
+    margin-top: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Ajuste conforme necessário */
+  }
+  
+  .info-container img {
+    margin-right: 10px; /* Espaçamento entre a imagem e os parágrafos */
+  }
+  
+  .info-text {
+    text-align: center;
+  }

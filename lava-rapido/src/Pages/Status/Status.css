@@ -1,0 +1,26 @@
+.content-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.content-status input {
+    width: 275px;
+    height: 52px;
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+}
+
+.content-status button {
+    width: 150px;
+    height: 33px;
+    background-color: #132A3A;
+    color: #FFFFFF;
+    border-radius: 50px;
+}
