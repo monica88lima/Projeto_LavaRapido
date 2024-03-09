@@ -157,9 +157,10 @@ CHANGE COLUMN `Celular` `Celular` VARCHAR(15) CHARACTER SET 'utf8mb4' COLLATE 'u
 
 
 
-[![Alt text] Configurar a string de conexão no arquivo appsettings.json.
+> :warning: **Importante:**  Configurar a string de conexão no arquivo appsettings.json.
 
-#-[Pacotes e Bibliotecas](#Pacotes e Bibliotecas)
+### Pacotes e Bibliotecas :triangular_flag_on_post:
+
 net8.0
 AutoMapper(13.0.1)
 Pomelo.EntityFrameworkCore.MySql (8.0.0)
