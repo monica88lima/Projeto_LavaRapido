@@ -1,45 +1,44 @@
 # Projeto Senac - Lava_Rápido
-<h1 align="center">:computer: #Criação de um Sistema para Acompanhamento de Serviço</h1>
 
-A implementação compreende a jornada de um usuário individual que deseja consultar o andamento do 
-serviço de lavagem.
+<h1 align="center">:car: Sistema de Acompanhamento de Serviço de Lava-rápido :car:</h1>
 
-:heavy_check_mark:Descrição do Projeto
+## Descrição do Projeto :heavy_check_mark:
 
-:computer:-[Tecnologia](#tecnologia)
+Este projeto compreende a jornada de um usuário individual que deseja consultar o andamento do serviço de lavagem.
 
-C#
-MySql
+### Tecnologia :computer:
 
+- C#
+- MySQL
 
-#:pushpin:-[Recursos](#recursos)
-Visual Studio Code
-Visual Studio Community 2022
+### Recursos :pushpin:
 
-:triangular_flag_on_post:-[Sobre](#Sobre)
+- Visual Studio Code
+- Visual Studio Community 2022
 
-Dentro do perfil escolhido [Usuário Particular] 
+### Sobre :triangular_flag_on_post:
 
-### DoD
+Dentro do perfil escolhido [Usuário Particular]
+
+## DoD
 
 - Tela de Login
-     
-     [x] Tela com campos de Email e Senha
-     [x] Validação de e-mail e Senha
-	 
+   - [x] Tela com campos de Email e Senha
+   - [x] Validação de e-mail e Senha
+
 - Tela Menu
-     [x] Componentes com Icones e nome do serviço
-  
+   - [x] Componentes com Ícones e nome do serviço
+
 - Tela Status
-     [x] Campo Input para pesquisa da Placa 
-     [x] Validação da placa, e retorno com os dados do status do veiculo pesquisado.
+   - [x] Campo Input para pesquisa da Placa
+   - [x] Validação da placa e retorno com os dados do status do veículo pesquisado.
+
 - Tela Timeline
-     [x] Linha do Tempo que é preenchida com as informações obtidas a partir da pesquisa da placa
-     
+   - [x] Linha do Tempo que é preenchida com as informações obtidas a partir da pesquisa da placa
 
-:file_folder:Como Usar
+## Como Usar :file_folder:
 
-Criando Banco de Dados
+### Criando Banco de Dados
 
    ```bash
 -- Schema Lava_Rapido
