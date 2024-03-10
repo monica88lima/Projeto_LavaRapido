@@ -4,8 +4,17 @@
 
 ## Descrição do Projeto :heavy_check_mark:
 
-Este projeto compreende a jornada de um usuário individual que deseja consultar o andamento do serviço de lavagem.
+Este projeto consiste em uma aplicação desenvolvida em C# para um lava rápido, onde os clientes podem agendar suas lavagens de forma conveniente. Apresenta-se a jornada de um usuário individual que deseja consultar o andamento do serviço de lavagem.
 
+### Funcionalidades Principais
+1. **Agendamento de Lavagem:** Permitir que os clientes agendem suas lavagens, escolhendo data e horário disponíveis.
+2. **Histórico de Lavagens:** Manter um registro do histórico de lavagens para cada cliente.
+3. **Notificações:** Enviar notificações aos clientes para confirmar agendamentos e lembrá-los das próximas lavagens
+
+### Pré-requisitos
+- Visual Studio instalado
+- Conexão com banco de dados configurada (SQL Server, MySQL, etc.)
+  
 ### Tecnologia :computer:
 
 - C#
@@ -18,7 +27,16 @@ Este projeto compreende a jornada de um usuário individual que deseja consultar
 
 ### Sobre :triangular_flag_on_post:
 
-Dentro do perfil escolhido [Usuário Particular]
+O Aplicativo para Lava Rápido foi desenvolvido com o objetivo de modernizar e simplificar a gestão de serviços de lavagem de veículos. A inspiração para este projeto surgiu da necessidade de oferecer aos proprietários de lava-rápidos e aos usuários uma solução eficiente para agendamento e pagamento de serviços.
+
+### Principais Pontos:
+
+- **Simplicidade e Conveniência:** Nosso aplicativo visa proporcionar uma experiência de lavagem de veículos sem complicações, permitindo que os usuários agendem serviços com facilidade e efetuem pagamentos online de forma segura.
+
+- **Tecnologias Utilizadas:** O aplicativo é construído utilizando C#, garantindo eficiência e desempenho. A base de dados é alimentada por MySQL.
+
+Agradecemos por fazer parte do nosso projeto e esperamos que o Aplicativo para Lava Rápido melhore sua experiência de lavagem de veículos.
+
 
 ## DoD
 
@@ -38,9 +56,27 @@ Dentro do perfil escolhido [Usuário Particular]
 
 ## Como Usar :file_folder:
 
+### Instalação e Configuração
+1. Clone o repositório: `git clone [https://github.com/monica88lima/Projeto_LavaRapido.git]`
+2. Abra o projeto no Visual Studio.
+3. Configure a conexão com o banco de dados no arquivo de configuração `index.html`.
+4. Execute o script SQL fornecido para criar as tabelas necessárias.
+
+### Executando o Projeto
+1. Compile e execute o projeto no Visual Studio.
+2. Abra o navegador e acesse `http://localhost:porta` para utilizar a aplicação.
+
+### Licença
+A licença do projeto é MIT License.
+
+### Contato
+
+https://www.linkedin.com/in/monicalima/
+https://www.linkedin.com/in/roberto-pacheco-527920238/
+https://br.linkedin.com/in/jo%C3%A3o-ant%C3%B4nio-neto-2820b0182
+
 ### Criando Banco de Dados
 
-   ```bash
 -- Schema Lava_Rapido
 -- -----------------------------------------------------
 DROP SCHEMA IF EXISTS `Lava_Rapido` ;
@@ -154,8 +190,6 @@ ALTER TABLE `LavaRapido`.`Clientes`
 CHANGE COLUMN `Celular` `Celular` VARCHAR(15) CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci' NOT NULL ;
     
    ```
-
-
 
 > :warning: **Importante:**  Configurar a string de conexão no arquivo appsettings.json.
 
