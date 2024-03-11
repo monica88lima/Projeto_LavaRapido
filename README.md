@@ -76,7 +76,7 @@ https://www.linkedin.com/in/roberto-pacheco-527920238/
 https://br.linkedin.com/in/jo%C3%A3o-ant%C3%B4nio-neto-2820b0182
 
 ### Criando Banco de Dados
-
+ ```
 -- Schema Lava_Rapido
 -- -----------------------------------------------------
 DROP SCHEMA IF EXISTS `Lava_Rapido` ;
