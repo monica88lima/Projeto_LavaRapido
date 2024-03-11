@@ -59,7 +59,7 @@ Agradecemos por fazer parte do nosso projeto e esperamos que o Aplicativo para L
 ### Instalação e Configuração
 1. Clone o repositório: `git clone [https://github.com/monica88lima/Projeto_LavaRapido.git]`
 2. Abra o projeto no Visual Studio.
-3. Configure a conexão com o banco de dados no arquivo de configuração `index.html`.
+3. Configure a conexão com o banco de dados no arquivo de configuração `appsettings.json`.
 4. Execute o script SQL fornecido para criar as tabelas necessárias.
 
 ### Executando o Projeto
