@@ -42,6 +42,29 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const checkLogoutTime = () => {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+      if (isLoggedIn) {
+        const loginTime = parseInt(localStorage.getItem('loginTime'));
+        const currentTime = new Date().getTime();
+        const elapsedTime = currentTime - loginTime;
+        const minutesElapsed = elapsedTime / (1000 * 60);
+
+        if (minutesElapsed >= 10) {
+          // Remova o item de login
+          localStorage.removeItem('isLoggedIn');
+          // Redirecione para a página de login
+          window.location.href = '/login';
+        }
+      }
+    };
+
+    const interval = setInterval(checkLogoutTime, 1000 * 60); // Verifica a cada minuto
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -50,7 +73,7 @@ function App() {
           <Route path="/" element={isLoggedIn === true ? <Home /> : <Navigate to="/login" />} />
           <Route path="/status" element={isLoggedIn === true ? <Status /> : <Navigate to="/login" />} />
 
-          <Route path="/timeline" element={carFound === true ?  <Timeline /> : <Navigate to="/status" />} />
+          <Route path="/timeline" element={carFound === true ? <Timeline /> : <Navigate to="/status" />} />
         </Routes>
       </BrowserRouter>
     </div>
