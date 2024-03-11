@@ -23,9 +23,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .form-label, .form-input, .form-button {
+}
+
+.form-label,
+.form-input,
+.form-button {
     margin-bottom: 10px;
-  }
-  
+}
+
+.carNotFound-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carNotFound-content p{
+    padding: 5px;
+    color: red;
+    background-color: white;
+}

@@ -35,7 +35,6 @@
 }
 
 .content-login button {
-  /* margin-top: 15px; */
   width: 133px;
   height: 33px;
   background-color: #132A3A;
@@ -65,4 +64,12 @@
   padding: 10px;
   margin-top: 10px;
   font-weight: bold;
+}
+
+.register-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
 }

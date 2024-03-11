@@ -9,7 +9,7 @@ const Home = () => {
     <div id='home'>
       <DefaultPage textHeader='LAVA-RÁPIDO'>
         <Row justify="center" className='row'>
-          <Col span={6} className="card-col">
+          <Col span={6} className="card-col" gap>
             <a href="/agendar">
               <Card imgCard='icons/agenda.png' altCard='Alt card' title="Agendar" description="Descrição" />
             </a>

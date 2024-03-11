@@ -6,6 +6,7 @@ import Status from './Pages/Status/Status';
 import Timeline from './Pages/Timeline/Timeline';
 
 import './App.css';
+import Register from './Pages/Register/Register';
 function App() {
 
   const [carFound, setCarFound] = useState(localStorage.getItem('carFound') === 'true');
@@ -70,10 +71,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={isLoggedIn === false ? <Login /> : <Navigate to="/" />} />
+          <Route path="/register" element={isLoggedIn === false ? <Register /> : <Navigate to="/" />} />
           <Route path="/" element={isLoggedIn === true ? <Home /> : <Navigate to="/login" />} />
           <Route path="/status" element={isLoggedIn === true ? <Status /> : <Navigate to="/login" />} />
 
-          <Route path="/timeline" element={carFound === true ? <Timeline /> : <Navigate to="/status" />} />
+          <Route path="/timeline" element={carFound === true ?  <Timeline /> : <Navigate to="/status" />} />
         </Routes>
       </BrowserRouter>
     </div>

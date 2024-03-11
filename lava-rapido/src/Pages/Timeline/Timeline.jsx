@@ -4,13 +4,13 @@ import './Timeline.css'
 
 const Timeline = () => {
   let statusCarObject = null; // Inicialize como null ou um valor padrão
-
+  
   const statusCar = localStorage.getItem('statusCar');
-
+  
   if (statusCar) {
     // Analise o JSON de volta para um objeto JavaScript
     statusCarObject = JSON.parse(statusCar);
-
+    
     // Agora você pode acessar as propriedades do objeto.
     console.log(statusCarObject);
   } else {
@@ -27,8 +27,8 @@ const Timeline = () => {
           <h1>{statusCarObject.placa}</h1>
           <Divider />
           <p>SERVIÇO: {statusCarObject.nomeServico}</p>
-          <p>STATUS: {statusCarObject.status}</p>
-          <p>POSICÃO: {statusCarObject.statusVeiculo}</p>
+          <p>STATUS: {statusCarObject.statusVeiculo}</p>
+          <p>POSICÃO: {statusCarObject.posicao}</p>
           <div className="progress-bar">
             <div className="step-container">
               <div className={`step ${currentStep >= 1 ? 'active' : ''}`}>

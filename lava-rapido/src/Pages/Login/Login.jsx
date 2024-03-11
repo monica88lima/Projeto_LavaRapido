@@ -30,14 +30,14 @@ const Login = () => {
                 // Redirecione o usuário para a URL '/'
                 window.location.href = '/';
             } else {
-                setErrorMessage('Dados inválidos. Por favor, verifique suas credenciais.');
+                setErrorMessage('Dados inválidos.');
                 setMessageType('error');
             }
         } catch (error) {
             console.error('Ocorreu um erro:', error);
             // Se a resposta for um erro 400 (Bad Request), exibe a mensagem de erro
             if (error.response && error.response.status === 400) {
-                setErrorMessage('Dados inválidos. Por favor, verifique suas credenciais.');
+                setErrorMessage('Email ou Senha inválidos.');
                 setMessageType('error');
             }
         }
@@ -45,7 +45,7 @@ const Login = () => {
 
     return (
         <Row>
-            <DefaultPage menu={false}>
+            <DefaultPage textHeader="LOGIN" menu={false}>
                 <div className='content-login'>
                     <div className='content'>
                         <form onSubmit={handleSubmit} className='form'>
@@ -63,6 +63,9 @@ const Login = () => {
                             </div>
                             <div className='button-container'>
                                 <Button type="submit" children="ENTRAR" />
+                            </div>
+                            <div className='register-container'>
+                                <a href="/register">Registre-se aqui</a>
                             </div>
                         </form>
                     </div>
