@@ -3,17 +3,32 @@ import DefaultPage from "../DefaultPage/DefaultPage"
 import './Timeline.css'
 
 const Timeline = () => {
-  const currentStep = 2
+  let statusCarObject = null; // Inicialize como null ou um valor padrão
+  
+  const statusCar = localStorage.getItem('statusCar');
+  
+  if (statusCar) {
+    // Analise o JSON de volta para um objeto JavaScript
+    statusCarObject = JSON.parse(statusCar);
+    
+    // Agora você pode acessar as propriedades do objeto.
+    console.log(statusCarObject);
+  } else {
+    console.log('Item não encontrado no localStorage.');
+  }
+
+  const currentStep = parseInt(statusCarObject.posicao)
+
   return (
     <div>
       <DefaultPage >
         <div className="content-timeline">
           <h2>PLACA</h2>
-          <h1>ABC1234</h1>
+          <h1>{statusCarObject.placa}</h1>
           <Divider />
-          <p>SERVIÇO: LAVAGEM COMPLETA</p>
-          <p>STATUS: AGUARDANDO</p>
-          <p>POSICÃO: 3º</p>
+          <p>SERVIÇO: {statusCarObject.nomeServico}</p>
+          <p>STATUS: {statusCarObject.status}</p>
+          <p>POSICÃO: {statusCarObject.statusVeiculo}</p>
           <div className="progress-bar">
             <div className="step-container">
               <div className={`step ${currentStep >= 1 ? 'active' : ''}`}>
@@ -36,12 +51,8 @@ const Timeline = () => {
               <img className="img-timeline" src="icons/icons8-controle-de-tração-50.png" alt="" />
             </div>
           </div>
-          <div className="info-container">
-            <img src="icons/icons8-stopwatch-48.png" alt="" />
-            <div className="info-text">
-              <p>ENTRADA: 10:00</p>
-              <p>TEMPO PREVISTO PARA ENTREGA: 14:00</p>
-            </div>
+          <div className="toGoBack-container">
+            <a href="/status">{"VOLTAR <"} </a>
           </div>
         </div>
       </DefaultPage>

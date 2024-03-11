@@ -33,7 +33,6 @@
 
 .step.active {
     background-color: green;
-    /* Ou a cor que você desejar para as etapas concluídas */
 }
 
 .step-container {
@@ -53,13 +52,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px; /* Ajuste conforme necessário */
-  }
-  
-  .info-container img {
-    margin-right: 10px; /* Espaçamento entre a imagem e os parágrafos */
-  }
-  
-  .info-text {
+    margin-top: 20px;
+}
+
+.info-container img {
+    margin-right: 10px;
+}
+
+.info-text {
     text-align: center;
-  }
+}
+
+.toGoBack-container {
+    margin-top: 30px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

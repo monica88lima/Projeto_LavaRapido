@@ -1,10 +1,9 @@
 import React from 'react'
-import { Button as ButtonAntd } from 'antd';
 
-const Button = ({textButton}) => {
+const Button = ({type, children, className = ''}) => {
   return (
     <div>
-        <ButtonAntd>{textButton}</ButtonAntd>
+        <button type={type} className={className}>{children}</button>
     </div>
   )
 }
