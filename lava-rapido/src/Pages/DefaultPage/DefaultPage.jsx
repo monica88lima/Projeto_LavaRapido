@@ -3,7 +3,6 @@ import Menu from '../../Components/Menu/Menu'
 import Header from '../../Components/Header/Header'
 
 const DefaultPage = ({ textHeader ,children, menu = true }) => {
-
     return (
         <div id='defaultPage'>
                 {menu ? <Menu /> : null}

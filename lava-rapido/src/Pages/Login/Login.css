@@ -18,7 +18,7 @@
 
 .content-login label {
   color: #132A3A;
-} 
+}
 
 .content-login input {
   width: 100%;
@@ -28,17 +28,41 @@
   margin-bottom: 5px;
 }
 
-.button-container{
+.button-container {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
 .content-login button {
-  margin-top: 15px;
+  /* margin-top: 15px; */
   width: 133px;
   height: 33px;
   background-color: #132A3A;
   color: #FFFFFF;
   border-radius: 50px;
+}
+
+.content-inputs {
+  margin-bottom: 30px;
+}
+
+.error-message {
+  color: red;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.success-message {
+  color: green;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: bold;
 }

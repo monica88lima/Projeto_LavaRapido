@@ -4,13 +4,13 @@ import './Timeline.css'
 
 const Timeline = () => {
   let statusCarObject = null; // Inicialize como null ou um valor padrão
-  
+
   const statusCar = localStorage.getItem('statusCar');
-  
+
   if (statusCar) {
     // Analise o JSON de volta para um objeto JavaScript
     statusCarObject = JSON.parse(statusCar);
-    
+
     // Agora você pode acessar as propriedades do objeto.
     console.log(statusCarObject);
   } else {

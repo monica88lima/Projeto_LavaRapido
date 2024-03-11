@@ -9,7 +9,9 @@ const Sidebar = ({ isOpen }) => {
     return (
         <div className={`sidebar ${isOpen ? 'active' : ''}`}>
             <div className='top'>
-                <p>MENU</p>
+                <a href="/">
+                    <p>MENU</p>
+                </a>
             </div>
             <div className='bottom'>
                 <ul>

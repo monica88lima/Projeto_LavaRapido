@@ -1,6 +1,6 @@
   import React, { useState } from 'react';
   import DefaultPage from '../DefaultPage/DefaultPage';
-  import './Status.css'; // Importe o arquivo CSS onde você irá definir os estilos
+  import './Status.css';
   import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 import Button from '../../Components/Button/Button';
