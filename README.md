@@ -195,8 +195,9 @@ CHANGE COLUMN `Celular` `Celular` VARCHAR(15) CHARACTER SET 'utf8mb4' COLLATE 'u
 
 ### Pacotes e Bibliotecas :triangular_flag_on_post:
 
-net8.0
-AutoMapper(13.0.1)
-Pomelo.EntityFrameworkCore.MySql (8.0.0)
-Microsoft.EntityFrameworkCore.Tools (8.0.2)
-Microsoft.EntityFrameworkCore.Design(8.0.2)
+- .NET 8.0
+- AutoMapper (13.0.1)
+- Pomelo.EntityFrameworkCore.MySql (8.0.0)
+- Microsoft.EntityFrameworkCore.Tools (8.0.2)
+- Microsoft.EntityFrameworkCore.Design (8.0.2)
+
