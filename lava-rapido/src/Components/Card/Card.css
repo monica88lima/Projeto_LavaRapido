@@ -1,18 +1,47 @@
 .card {
-    width: 96px;
-    height: 120px;
+  width: 100px;
+  height: 100px;
+  background: #7EC6EC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center; 
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    width: 75px;
+    height: 75px;
     background: #7EC6EC;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   .card img {
-    width: 40px;
-    height: 40px;
-    margin-top: 20px;
+    width: 28px;
+    height: 28px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-.title {
+  .title {
     font-size: 12px;
+    font-weight: bold;
+  }
+  
 }

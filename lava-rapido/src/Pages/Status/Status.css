@@ -1,15 +1,9 @@
-.content-status {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-label {
+.form-label {
     margin-bottom: 10px;
     color: #FFFFFF;
 }
 
-.content-status input {
+.form-input {
     width: 275px;
     height: 52px;
     border-radius: 8px;
@@ -17,10 +11,33 @@ label {
     margin-bottom: 20px;
 }
 
-.content-status button {
+.form-button {
     width: 150px;
     height: 33px;
     background-color: #132A3A;
     color: #FFFFFF;
     border-radius: 50px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-label,
+.form-input,
+.form-button {
+    margin-bottom: 10px;
+}
+
+.carNotFound-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carNotFound-content p{
+    padding: 5px;
+    color: red;
+    background-color: white;
 }

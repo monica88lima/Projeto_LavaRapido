@@ -3,3 +3,14 @@
   background-color: #177FB3;
   height: 150vh;  
 }
+
+.menu-wrapper {
+  position: fixed;
+  z-index: 100;
+  /* width: 100%; */
+}
+
+.children {
+  position: relative;
+  z-index: 1; 
+}
