@@ -22,6 +22,7 @@ Este projeto consiste em uma aplicação desenvolvida em C# para um lava rápido
 - C#
 - MySQL
 - React
+- [Figma](https://www.figma.com/file/ueZPcKAu4p9M2jvKvW1pAd/Lava-R%C3%A1pido?type=design&node-id=68-123&mode=design&t=iRL6dfvzCzD8P0IS-0)
 
 ### Recursos :pushpin:
 
