@@ -19,11 +19,13 @@ Este projeto consiste em uma aplicação desenvolvida em C# para um lava rápido
 
 - C#
 - MySQL
+- React
 
 ### Recursos :pushpin:
 
 - Visual Studio Code
 - Visual Studio Community 2022
+- Node.js
 
 ### Sobre :triangular_flag_on_post:
 
@@ -53,18 +55,26 @@ Agradecemos por fazer parte do nosso projeto e esperamos que o Aplicativo para L
 
 - Tela Timeline
    - [x] Linha do Tempo que é preenchida com as informações obtidas a partir da pesquisa da placa
+  
+* [Como usar](#como-usar)
+   * :triangular_flag_on_post: Clique na imagem
+  
+   * [![Alt text](https://img.youtube.com/vi/Vy1ClxxL4fA/0.jpg)](https://youtube.com/shorts/Vy1ClxxL4fA?feature=share)
 
 ## Como Usar :file_folder:
 
 ### Instalação e Configuração
 1. Clone o repositório: `git clone [https://github.com/monica88lima/Projeto_LavaRapido.git]`
-2. Abra o projeto no Visual Studio.
-3. Configure a conexão com o banco de dados no arquivo de configuração `appsettings.json`.
-4. Execute o script SQL fornecido para criar as tabelas necessárias.
+2. Configure a conexão com o banco de dados no arquivo de configuração `appsettings.json`, do *ProjetoLavaRapidoAPI*.
+3. Execute o script SQL fornecido para criar as tabelas necessárias no banco de dados.
 
 ### Executando o Projeto
-1. Compile e execute o projeto no Visual Studio.
-2. Abra o navegador e acesse `http://localhost:porta` para utilizar a aplicação.
+1. Abra e execute o projeto *ProjetoLavaRapidoAPI* no Visual Studio.
+2. Abra o projeto *lava-rapido*, com Visual Studio Code
+3. No Visual Studio Code, clique na aba `Terminal`
+4. Acesse no terminal a pasta *lava-rapido*
+5. Execute o comando `npm install`, para baixar as dependencias do projeto
+6. Execute o comando  `npm run star`
 
 ### Licença
 A licença do projeto é MIT License.
@@ -191,8 +201,6 @@ CHANGE COLUMN `Celular` `Celular` VARCHAR(15) CHARACTER SET 'utf8mb4' COLLATE 'u
     
    ```
 
-> :warning: **Importante:**  Configurar a string de conexão no arquivo appsettings.json.
-
 ### Pacotes e Bibliotecas :triangular_flag_on_post:
 
 - .NET 8.0
@@ -200,4 +208,5 @@ CHANGE COLUMN `Celular` `Celular` VARCHAR(15) CHARACTER SET 'utf8mb4' COLLATE 'u
 - Pomelo.EntityFrameworkCore.MySql (8.0.0)
 - Microsoft.EntityFrameworkCore.Tools (8.0.2)
 - Microsoft.EntityFrameworkCore.Design (8.0.2)
+
 
