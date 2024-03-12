@@ -61,7 +61,7 @@ Agradecemos por fazer parte do nosso projeto e esperamos que o Aplicativo para L
 
    * :triangular_flag_on_post: Clique na imagem
   
-    * [![Vídeo de Demonstração](https://img.youtube.com/vi/7Pw-57h04.jpg)](https://https://youtu.be/7Pw-57h04jg)
+    * [![Vídeo de Demonstração](https://img.youtube.com/vi/v=7Pw-57h04jg.jpg)](https://https://youtu.be/7Pw-57h04jg)
 
 ## Como Usar :file_folder:
 
