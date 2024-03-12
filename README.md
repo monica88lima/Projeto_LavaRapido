@@ -83,9 +83,12 @@ A licença do projeto é MIT License.
 
 ### Contato
 
-https://www.linkedin.com/in/monicalima/
-https://www.linkedin.com/in/roberto-pacheco-527920238/
-https://br.linkedin.com/in/jo%C3%A3o-ant%C3%B4nio-neto-2820b0182
+## Perfis no LinkedIn
+
+- [Monica Lima](https://www.linkedin.com/in/monicalima/)
+- [Roberto Pacheco](https://www.linkedin.com/in/roberto-pacheco-527920238/)
+- [João Antônio Neto](https://br.linkedin.com/in/jo%C3%A3o-ant%C3%B4nio-neto-2820b0182)
+
 
 ### Criando Banco de Dados
  ```
