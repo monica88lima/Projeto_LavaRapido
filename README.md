@@ -13,6 +13,8 @@ Este projeto consiste em uma aplicação desenvolvida em C# para um lava rápido
 
 ### Pré-requisitos
 - Visual Studio instalado
+- Visual Studio Code instalado
+- Node.js
 - Conexão com banco de dados configurada (SQL Server, MySQL, etc.)
   
 ### Tecnologia :computer:
@@ -56,7 +58,7 @@ Agradecemos por fazer parte do nosso projeto e esperamos que o Aplicativo para L
 - Tela Timeline
    - [x] Linha do Tempo que é preenchida com as informações obtidas a partir da pesquisa da placa
   
-* [Como usar](#como-usar)
+* [Apresentação](#Apresentacao)
    * :triangular_flag_on_post: Clique na imagem
   
    * [![Alt text](https://img.youtube.com/vi/Vy1ClxxL4fA/0.jpg)](https://youtube.com/shorts/Vy1ClxxL4fA?feature=share)
