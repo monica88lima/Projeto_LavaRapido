@@ -61,7 +61,7 @@ Agradecemos por fazer parte do nosso projeto e esperamos que o Aplicativo para L
 * [Apresentação](#Apresentacao)
    * :triangular_flag_on_post: Clique na imagem
   
-   * [![Alt text](https://img.youtube.com/vi/Vy1ClxxL4fA/0.jpg)](https://youtube.com/shorts/Vy1ClxxL4fA?feature=share)
+   * [![Alt text](https://img.youtube.com/vi/V7Pw-57h04/0.jpg)](https://www.youtube.com/watch?v=7Pw-57h04jg)
 
 ## Como Usar :file_folder:
 
